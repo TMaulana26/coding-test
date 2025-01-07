@@ -3,39 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Soal Coding Test</title>
+    <meta name="description" content="Text Processing and Conversion Tool" />
+
+    <title>Text Processing Tool</title>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+
+    <!-- Preload the JavaScript file -->
+    <link rel="preload" href="script.js" as="script" />
   </head>
   <body>
-    <h1>Soal Coding Test</h1>
-    <p>Inputkan kalimat abjad:</p>
-    <input type="text" id="inputText" placeholder="Masukkan kalimat" />
-    <button onclick="processText()">Proses</button>
+    <main class="container">
+      <!-- Header Section -->
+      <header class="header">
+        <h1>Text Processing Tool</h1>
+        <p class="header-description">Enter your text below for processing:</p>
+      </header>
 
-    <section id="soal1">
-      <h2>Soal 1: Konversi ke Angka</h2>
-      <div class="output" id="output1"></div>
-    </section>
+      <!-- Input Section -->
+      <div class="input-group">
+        <input
+          type="text"
+          id="inputText"
+          placeholder="Enter your text here..."
+          aria-label="Input text"
+        />
+        <button type="button" onclick="processText()" aria-label="Process text">
+          Process
+        </button>
+      </div>
 
-    <section id="soal2">
-      <h2>Soal 2: Operasi Matematika</h2>
-      <div class="output" id="output2"></div>
-    </section>
+      <!-- Results Sections -->
+      <div class="results-container">
+        <!-- Section 1: Number Conversion -->
+        <section id="soal1" class="result-section">
+          <h2>1. Number Conversion</h2>
+          <div class="output" id="output1" aria-live="polite"></div>
+        </section>
 
-    <section id="soal3">
-      <h2>Soal 3: Konversi ke Abjad</h2>
-      <div class="output" id="output3"></div>
-    </section>
+        <!-- Section 2: Mathematical Operations -->
+        <section id="soal2" class="result-section">
+          <h2>2. Mathematical Operations</h2>
+          <div class="output" id="output2" aria-live="polite"></div>
+        </section>
 
-    <section id="soal4">
-      <h2>Soal 4: Operasi Matematika Ulang</h2>
-      <div class="output" id="output4"></div>
-    </section>
+        <!-- Section 3: Letter Conversion -->
+        <section id="soal3" class="result-section">
+          <h2>3. Letter Conversion</h2>
+          <div class="output" id="output3" aria-live="polite"></div>
+        </section>
 
-    <section id="soal5">
-      <h2>Soal 5: Operasi pada Huruf Menjadi Operasi Matematika</h2>
-      <div class="output" id="output5"></div>
-    </section>
+        <!-- Section 4: Mathematical Recalculation -->
+        <section id="soal4" class="result-section">
+          <h2>4. Mathematical Recalculation</h2>
+          <div class="output" id="output4" aria-live="polite"></div>
+        </section>
+
+        <!-- Section 5: Letter Operations -->
+        <section id="soal5" class="result-section">
+          <h2>5. Letter to Math Operations</h2>
+          <div class="output" id="output5" aria-live="polite"></div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
   </body>
 </html>
